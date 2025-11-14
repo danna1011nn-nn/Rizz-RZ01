@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rizz — Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- Left column: servidores -->
+    <aside class="servers" aria-label="Servidores">
+      <div class="server-list" id="serverList"></div>
+      <button id="addServerBtn" class="server-add" aria-label="Adicionar servidor">+</button>
+    </aside>
+
+    <!-- Middle column: canais e top bar -->
+    <nav class="channels-col" aria-label="Canais">
+      <header class="brand">
+        <div class="logo">Rizz</div>
+        <div class="brand-sub">Comunidade</div>
+      </header>
+
+      <div class="channels-wrap">
+        <div class="section-title">Canais</div>
+        <ul id="channelList" class="channel-list" role="list"></ul>
+      </div>
+
+      <footer class="user-mini" id="userMini">
+        <div class="user-avatar">U</div>
+        <div class="user-info">
+          <div class="user-name">Usuário Exemplo</div>
+          <div class="user-status">online</div>
+        </div>
+      </footer>
+    </nav>
+
+    <!-- Right column: chat -->
+    <main class="chat-col" aria-live="polite">
+      <div class="chat-header" id="chatHeader">
+        <div class="chat-title">#geral</div>
+        <div class="chat-sub">Canal público</div>
+      </div>
+
+      <section class="messages" id="messages" tabindex="0" role="log" aria-label="Mensagens">
+        <!-- mensagens via JS -->
+      </section>
+
+      <form id="messageForm" class="composer" aria-label="Enviar mensagem">
+        <input id="messageInput" type="text" placeholder="Digite uma mensagem..." autocomplete="off" />
+        <button type="submit" id="sendBtn">Enviar</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
